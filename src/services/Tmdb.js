@@ -72,5 +72,27 @@ export default {
         `),
       },
     ];
+  },
+  getMovieInfo: async (movieId, movieType) => {
+    let movieInfo = {};
+
+    if(movieId) {
+      switch (movieType) {
+        case 'movie':
+          movieInfo = await apiFetch(
+            `/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`
+          )
+          break;
+        case 'tv':
+          movieInfo = await apiFetch(
+            `/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`
+          )
+          break;
+        default:
+          movieInfo = null;
+          break;
+      }
+    }
+    return movieInfo
   }
 };
