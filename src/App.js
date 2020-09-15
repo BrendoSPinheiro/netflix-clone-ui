@@ -4,11 +4,14 @@ import './App.css';
 
 import MovieRow from './components/MovieRow/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie/FeaturedMovie';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
   const [movies, setMovies] = useState([]);
   const [featuredMovie, setFeaturedMovie] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -26,8 +29,22 @@ function App() {
 
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      window.scrollY > 10 ? setBlackHeader(true) : setBlackHeader(false);
+    }
+
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
   return (
     <div className="page">
+
+      <Header black={blackHeader}/>
+
       {featuredMovie && 
         <FeaturedMovie item={featuredMovie}/>
       }
@@ -37,6 +54,17 @@ function App() {
           <MovieRow key={key} title={listMovies.title} items={listMovies.items}/>
         ))}
       </section>
+      <Footer/>
+      
+      {movies.length <= 0 &&
+        <div className="loading">
+          <img 
+            src="https://www.filmelier.com/pt/br/news/wp-content/uploads/2020/03/netflix-loading.gif" 
+            alt="Carregando"
+          />
+        </div>
+      }
+
     </div>
   );
 }

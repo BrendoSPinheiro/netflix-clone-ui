@@ -9,6 +9,11 @@ function FeaturedMovie({ item }){
     genres.push(genre.name);
   });
 
+  let description = item.data.overview;
+  if(description.length > 200){
+    description = description.substring(0, 200)+'...';
+  }
+
   return (
     <section className="featured" style={{
       backgroundSize: 'cover',
@@ -31,7 +36,7 @@ function FeaturedMovie({ item }){
                 item.data.number_of_seasons !== 1 ? 's' : ''
               }
             </div>
-            <div className="featured-description">{item.data.overview}</div>
+            <div className="featured-description">{description}</div>
             <div className="featured-buttons">
               <Button 
                 href={`/watch/${item.data.id}`} 
@@ -40,8 +45,8 @@ function FeaturedMovie({ item }){
               />
               <Button 
                 href={`/list/add/${item.data.id}`} 
-                content='+ Minha Lista'
-                style={{backgroundColor: '#333', color: '#FFF'}}
+                content='🛈 Mais informações'
+                style={{backgroundColor: 'rgba(109,109,110,0.8)', color: '#FFF'}}
               />
             </div>
             <div className="featured-genres">

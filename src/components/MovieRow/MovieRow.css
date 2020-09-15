@@ -11,8 +11,8 @@
   padding-left: 30px;
 }
 
-.movieRow-listItems{
-  width: 9999999999px;
+.movieRow-listItems {
+  transition: all ease 0.5s;
 }
 
 .movieRow-item{
@@ -29,4 +29,39 @@
 
 .movieRow-item img:hover{
   transform: scale(1);
+}
+
+.movieRow-ArrowLeft, .movieRow-ArrowRight{
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(20,20,20,.5);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.movieRow-ArrowLeft{
+  left: 0;
+}
+
+.movieRow-ArrowRight{
+  right: 0;
+}
+
+.movieRow:hover .movieRow-ArrowLeft,
+.movieRow:hover .movieRow-ArrowRight {
+  opacity: 1;
+}
+
+@media (max-width: 760px){
+  .movieRow-ArrowLeft,
+  .movieRow-ArrowRight {
+    opacity: 1;
+  }
 }
