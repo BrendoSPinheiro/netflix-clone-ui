@@ -34,7 +34,8 @@ header.black {
 .primary-navigation {
   display: flex;
   align-items: center;
-  margin-top: 12px;
+  margin: 0;
+  margin-top: 2px;
 }
 .navigation-tab{
   list-style: none;
@@ -55,6 +56,21 @@ header.black {
   font-weight: bold;
 }
 
+.botao-menu-mobile {
+  margin-top: 2px;
+}
+
+nav.mobile{
+  display: none;
+}
+
+.text-dropdown{
+  text-decoration: none;
+  color: #FFF;
+  font-size: 14px;
+  margin-left: 30px;
+}
+
 .header-user {
   height: 35px;
 }
@@ -62,4 +78,67 @@ header.black {
 .header-user img{
   height: 100%;
   border-radius: 3px;
+}
+
+
+
+@media (max-width: 760px) {
+  nav.desktop{
+    display: none;
+  }
+
+  nav.mobile{
+    display: block;
+  }
+
+  nav.mobile ul{
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 225px;
+    display: none;
+  }
+
+  nav.mobile li a, nav.mobile li{
+    width: 260px;
+    height: 50px;
+  }
+
+  nav.mobile li {
+    font-size: 16px;
+    list-style: none;
+    display: block;
+    
+  }
+
+  nav.mobile li:first-child a{
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  nav.mobile li a{
+    color: #b3b3b3;
+    font-size: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.9);
+    transition: all ease 0.4s;
+  }
+
+  nav.mobile li a:hover {
+    background-color: rgba(0,0,0,.8);
+  }
+
+  .header-logo img {
+    height: 70%;
+  }
+  .text-dropdown{
+    margin-left: 5px;
+  }
+  .botao-menu-mobile {
+    margin-top: 0;
+  }
 }
