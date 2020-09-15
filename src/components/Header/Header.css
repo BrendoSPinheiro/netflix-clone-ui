@@ -80,8 +80,6 @@ nav.mobile{
   border-radius: 3px;
 }
 
-
-
 @media (max-width: 760px) {
   nav.desktop{
     display: none;
