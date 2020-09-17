@@ -17,13 +17,13 @@
 
 ### 🖥 Technologies
 
-- [x] ReactJS
-- [x] Javascript
-- [x] Axios
-- [x] Material-ui
-- [x] Css
+- ✅ ReactJS
+- ✅ Javascript
+- ✅ Axios
+- ✅ Material-ui
+- ✅ Css
 
---
+---
 
 ### ⚙ How to use
 
