@@ -15,6 +15,16 @@
 
 ---
 
+### 🖥 Technologies
+
+[x] ReactJS
+[x] Javascript
+[x] Axios
+[x] Material-ui
+[x] Css
+
+--
+
 ### ⚙ How to use
 
 **Cloning repository and running**
