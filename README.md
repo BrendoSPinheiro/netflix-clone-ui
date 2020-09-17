@@ -1,4 +1,6 @@
-<img src="https://fontmeme.com/permalink/200915/d0d764c66e63c7c2ec49464c302a05c9.png" alt="netflix-font" border="0">
+<div align="center">
+  <img src="https://fontmeme.com/permalink/200915/d0d764c66e63c7c2ec49464c302a05c9.png" alt="netflix-font" border="0">
+</div>
 
 ---
 ### About 📝
