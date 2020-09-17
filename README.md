@@ -17,11 +17,11 @@
 
 ### 🖥 Technologies
 
-[x] ReactJS
-[x] Javascript
-[x] Axios
-[x] Material-ui
-[x] Css
+- [x] ReactJS
+- [x] Javascript
+- [x] Axios
+- [x] Material-ui
+- [x] Css
 
 --
 
